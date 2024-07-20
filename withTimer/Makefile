@@ -19,10 +19,10 @@ AVRDUDE=avrdude
 # AVRDUDE=/home/aurelius/.arduino15/packages/MicroCore/tools/avrdude/7.1-arduino.1/bin/avrdude
 TARGET=main
 
-# Налаштування файлів соурс коду
+# Налаштування файлів соурс коду.
 ifdef DEBUG
-SRCS=main.c uart.c
-CFLAGS=-std=c99 -Wall -g -Os -mmcu=${MCU} -DF_CPU=${F_CPU} -DDEBUG=${DEBUG} -I.
+SRCS=main.c ../lib/uart.c
+CFLAGS=-std=c99 -Wall -g -Os -mmcu=${MCU} -DF_CPU=${F_CPU} -DDEBUG=${DEBUG} -DUART_TX=PB0 -I.
 else
 SRCS=main.c
 CFLAGS=-std=c99 -Wall -g -Os -mmcu=${MCU} -DF_CPU=${F_CPU} -I.

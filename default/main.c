@@ -3,7 +3,7 @@
 #include <avr/interrupt.h>
 
 #ifdef DEBUG
-#include "uart.h"
+#include "../lib/uart.h"
 #endif
 
 // Коефіцієнт для розрахунку остаточного значення напруги
